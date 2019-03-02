@@ -12,6 +12,7 @@ namespace SimleSite.Controllers
     {
         public IActionResult Index()
         {
+            ViewData["Title"] = "Payment page";
             return View();
         }
 

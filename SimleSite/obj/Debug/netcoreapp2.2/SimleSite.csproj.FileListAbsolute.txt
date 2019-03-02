@@ -5,7 +5,6 @@ K:\STEP_SCHOOL\ASP.Net\NewEpos\SimpleSite\SimleSite\bin\Debug\netcoreapp2.2\Siml
 K:\STEP_SCHOOL\ASP.Net\NewEpos\SimpleSite\SimleSite\bin\Debug\netcoreapp2.2\SimleSite.pdb
 K:\STEP_SCHOOL\ASP.Net\NewEpos\SimpleSite\SimleSite\bin\Debug\netcoreapp2.2\SimleSite.Views.dll
 K:\STEP_SCHOOL\ASP.Net\NewEpos\SimpleSite\SimleSite\bin\Debug\netcoreapp2.2\SimleSite.Views.pdb
-K:\STEP_SCHOOL\ASP.Net\NewEpos\SimpleSite\SimleSite\obj\Debug\netcoreapp2.2\SimleSite.csprojAssemblyReference.cache
 K:\STEP_SCHOOL\ASP.Net\NewEpos\SimpleSite\SimleSite\obj\Debug\netcoreapp2.2\SimleSite.csproj.CoreCompileInputs.cache
 K:\STEP_SCHOOL\ASP.Net\NewEpos\SimpleSite\SimleSite\obj\Debug\netcoreapp2.2\SimleSite.RazorAssemblyInfo.cache
 K:\STEP_SCHOOL\ASP.Net\NewEpos\SimpleSite\SimleSite\obj\Debug\netcoreapp2.2\SimleSite.RazorAssemblyInfo.cs
