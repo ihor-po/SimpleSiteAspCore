@@ -7,18 +7,26 @@
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,400,400i,500,500i,600,600i,700,700i&amp;subset=latin-ext">
-    <environment include="Development">
-        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
-    </environment>
-    <environment exclude="Development">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css"
-              asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"
-              asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute"
-              crossorigin="anonymous"
-              integrity="sha256-eSi1q2PG6J7g7ib17yAaWMcrr5GrtohYChqibrV7PBE=" />
-    </environment>
+    @*<environment include="Development">*@
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+    @*</environment>*@
+    @*<environment exclude="Development">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css"
+                  asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"
+                  asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute"
+                  crossorigin="anonymous"
+                  integrity="sha256-eSi1q2PG6J7g7ib17yAaWMcrr5GrtohYChqibrV7PBE=" />
+        </environment>*@
     <link rel="stylesheet" href="~/lib/tabler/css/tabler.css" />
     <link rel="stylesheet" href="~/lib/tabler/css/dashboard.css" />
+    @*<link href="~/lib/tabler/plugins/charts-c3/plugin.css" rel="stylesheet" />*@
+    <link href="~/lib/tabler/plugins/maps-google/plugin.css" rel="stylesheet" />
+
+    <script src="~/lib/tabler/js/require.min.js"></script>
+    <script src="~/lib/tabler/js/dashboard.js"></script>
+    <script src="~/lib/tabler/plugins/maps-google/plugin.js"></script>
+    <script src="~/lib/tabler/plugins/input-mask/plugin.js"></script>
+   @* <script src="~/lib/tabler/plugins/charts-c3/js/c3.min.js"></script>*@
 
 </head>
 <body>
@@ -74,7 +82,7 @@
                                     </span>
                                 </a>
                                 <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
-                                    <a class="dropdown-item" href="#">
+                                    <a class="dropdown-item" href="profile">
                                         <i class="dropdown-icon fe fe-user"></i> Profile
                                     </a>
                                     <a class="dropdown-item" href="#">
@@ -117,14 +125,14 @@
                         <div class="col-lg order-lg-first">
                             <ul class="nav nav-tabs border-0 flex-column flex-lg-row">
                                 <li class="nav-item">
-                                    <a href="./index.html" class="nav-link"><i class="fe fe-home"></i> Home</a>
+                                    <a href="home" class="nav-link"><i class="fe fe-home"></i> Home</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="javascript:void(0)" class="nav-link active" data-toggle="dropdown"><i class="fe fe-box"></i> Interface</a>
+                                    <a href="javascript:void(0)" class="nav-link" data-toggle="dropdown"><i class="fe fe-box"></i> Interface</a>
                                     <div class="dropdown-menu dropdown-menu-arrow">
-                                        <a href="./cards.html" class="dropdown-item ">Cards design</a>
-                                        <a href="./charts.html" class="dropdown-item ">Charts</a>
-                                        <a href="./pricing-cards.html" class="dropdown-item active">Pricing cards</a>
+                                        <a href="cards" class="dropdown-item ">Cards design</a>
+                                        <a href="charts" class="dropdown-item ">Charts</a>
+                                        <a href="pricing" class="dropdown-item">Pricing cards</a>
                                     </div>
                                 </li>
                                 <li class="nav-item dropdown">
@@ -231,61 +239,6 @@
             </div>
         </footer>
     </div>
-    @*<header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">SimleSite</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </header>
-    <div class="container">
-        <partial name="_CookieConsentPartial" />
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
-    </div>
-
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2019 - SimleSite - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-        </div>
-    </footer>*@
-
-    <environment include="Development">
-        <script src="~/lib/jquery/dist/jquery.js"></script>
-        <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.js"></script>
-    </environment>
-    <environment exclude="Development">
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"
-                asp-fallback-src="~/lib/jquery/dist/jquery.min.js"
-                asp-fallback-test="window.jQuery"
-                crossorigin="anonymous"
-                integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=">
-        </script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"
-                asp-fallback-src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"
-                asp-fallback-test="window.jQuery && window.jQuery.fn && window.jQuery.fn.modal"
-                crossorigin="anonymous"
-                integrity="sha256-E/V4cWE4qvAeO5MOhjtGtqDzPndRO1LBk8lJ/PR7CA4=">
-        </script>
-    </environment>
-    <script src="~/lib/tabler/js/require.min.js" asp-append-version="true"></script>
-    <script src="~/lib/tabler/js/dashboard.js" asp-append-version="true"></script>
-    <script src="~/lib/tabler/js/core.js" asp-append-version="true"></script>
 
     @RenderSection("Scripts", required: false)
 </body>
